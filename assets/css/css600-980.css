@@ -1,5 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700,300i,600i,700i|Raleway:600,800");
+@import url("css600.css") screen and (max-device-width: 600px);
 
 /*
 	Paradigm Shift by HTML5 UP
@@ -32,11 +33,33 @@ footer, header, hgroup, menu, nav, section {
 
 
 /* 测试用 */
+@keyframes spinner {
+	0% {
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-moz-transform: rotate(359deg);
+		-webkit-transform: rotate(359deg);
+		-ms-transform: rotate(359deg);
+		transform: rotate(359deg);
+	}
+}
+
+/* Basic */
 html {
-	background: #ff6633;
+	background: #daff33;
 	margin: 0;
 	padding: 0;
 }
+
+h1{
+    font-size: 1rem;
+}
+
 body {
 	background: #669933;
 	margin: 0;
@@ -50,23 +73,38 @@ body {
 	float: left;
 }
 
-@media screen and (max-width: 480px) {
-	body {
-		background: #336699;
-	}
-	.thumb {
-		width: 100%;
-		float: none;
-		background-color:#0b2c4d;
-	}
+#header h1 {
+    display: inline-block;
 }
-@media screen and (min-width: 1200px) {
-	body {
-		background: #ff6644;
-	}
-	.thumb {
-		width: 33.3%;
-		background-color: #0f00ff;
-		float: left;
-	}
+
+#header ul {
+    float: right;
 }
+    #header li {
+        display: inline-block;
+        list-style: none;
+        text-align: left;
+    }
+
+#header .closer{
+    display: inline-block;
+    float: right;
+}
+
+@media screen and (max-width: 600px) {
+    .thumb {
+        width: 100%;
+    }
+    /* 隐藏导航 */
+    #header li {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    .thumb {
+        width: 33.33%;
+    }
+}
+
+/* Type */
