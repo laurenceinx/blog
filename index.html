@@ -3,43 +3,29 @@
     <head>
         <meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <style id="styles">
-            html {
-                background: #ff6633;
-                margin: 0;
-                padding: 0;
-            }
-            body {
-                background: #669933;
-                margin: 0;
-                padding: 0;
-            }
-            @media screen and (max-width: 480px) {
-                body {
-                    background: #336699;
-                }
-            }
-            @media screen and (min-width: 1200px) {
-                body {
-                    background: #ff6644;
-                }
-            }
-        </style>
+		<link rel="stylesheet" href="assets/css/main.css" />
     </head>
     <body>
-        <h1>It's work!</h1>
-        <p id="log"></p>
-        <script src="assets/js/zepto.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                var log = $('#log'), content;
+        <!-- Main -->
+        <div id="main">
+            <h1>It's work!</h1>
+            <p id="log"></p>
 
-                content = "Currect @viewport: 320px<br>";
-                content += "Window width: "+$(window).width()+"px<br>";
-                content += "Document width: "+$(document).width()+"px";
+            <div class="thumb">
+                <p>1</p>    
+            </div>
+            <div class="thumb">
+                <p>1</p>    
+            </div>
+            <div class="thumb">
+                <p>1</p>    
+            </div>
+            <div class="thumb">
+                <p>1</p>    
+            </div>
+            
+        </div>
+        
 
-                log.html(content);
-            })
-        </script>
     </body>
 </html>
