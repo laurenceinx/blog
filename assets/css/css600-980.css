@@ -140,10 +140,12 @@ body {
 
 #header2 {
   overflow: hidden;
+  width: 100%;
+  z-index: 10001;
 }
 
 .topnav2 li{
-  display: inline-block;
+  display: block;
   float: left;
   padding: 1em 1em 1em 1em;
   font-size: 0.5em;
@@ -167,4 +169,16 @@ body {
     display: inline-block;
     float: right;
   }
+  .topnav2.text.responsive {
+    display: block;
+  }
+    .topnav2.test.responsive li{
+      display: block;
+    }
+  .topnav2.contact.responsive {
+    display: block;
+  }
+    .topnav2.contact.responsive li{
+      display: block;
+    }
 }

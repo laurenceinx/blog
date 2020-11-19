@@ -45,12 +45,11 @@
 		});
 	// 隐藏与展示响应式导航2
 		$('.topnav2 .closer').click(function(){
-			alert('1');
 			$flag = $('.topnav2').hasClass('responsive');
 			if ($flag){
 				$('.topnav2').removeClass('responsive')
 			}else{
-				$('.topnav2').removeClass('responsive')
+				$('.topnav2').addClass('responsive')
 			};
 		});
 
