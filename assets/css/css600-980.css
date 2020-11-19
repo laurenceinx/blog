@@ -24,30 +24,16 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+  vertical-align: baseline;
+  text-decoration: none;
+  list-style-type: none;
+  list-style: none;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
-
-
-/* 测试用 */
-@keyframes spinner {
-	0% {
-		-moz-transform: rotate(0deg);
-		-webkit-transform: rotate(0deg);
-		-ms-transform: rotate(0deg);
-		transform: rotate(0deg);
-	}
-
-	100% {
-		-moz-transform: rotate(359deg);
-		-webkit-transform: rotate(359deg);
-		-ms-transform: rotate(359deg);
-		transform: rotate(359deg);
-	}
-}
 
 /* Basic */
 html {
@@ -77,27 +63,10 @@ body {
     display: inline-block;
 }
 
-#header ul {
-    float: right;
-}
-    #header li {
-        display: inline-block;
-        list-style: none;
-        text-align: left;
-    }
-
-#header .closer{
-    display: inline-block;
-    float: right;
-}
 
 @media screen and (max-width: 600px) {
     .thumb {
         width: 100%;
-    }
-    /* 隐藏导航 */
-    #header li {
-        display: none;
     }
 }
 
@@ -107,4 +76,95 @@ body {
     }
 }
 
-/* Type */
+/* 响应式导航Header1 */
+.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  .topnav li{
+    float: right;
+  }
+  
+    .topnav li a {
+      display: inline-block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+
+    .topnav li.icon {
+      display: none;
+    }
+
+@media screen and (max-width: 600px) {
+  .topnav li.icon {
+    display: inline-block;
+  }
+  .topnav li:not(:first-child) {
+    display: none;
+  }
+
+
+  .topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive li {
+    float: none;
+    display: inline;
+    -moz-transition: -moz-transform 0.5s ease;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    -ms-transition: -ms-transform 0.5s ease;
+    transition: transform 0.5s ease;
+  }
+  .topnav.responsive li a {
+    display: block;
+    text-align: center;
+    -moz-transition: -moz-transform 0.5s ease;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    -ms-transition: -ms-transform 0.5s ease;
+    transition: transform 0.5s ease;
+  }
+}
+
+/* 响应式导航Header2 */
+
+#header2 {
+  overflow: hidden;
+}
+
+.topnav2 li{
+  display: inline-block;
+  float: left;
+  padding: 1em 1em 1em 1em;
+  font-size: 0.5em;
+  text-decoration: none;
+  list-style-type: none;
+}
+  .topnav2 li a{
+    color: #202429;
+  }
+
+.topnav2 li.closer {
+  float: right;
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav2 li{
+    display: none;
+  }
+  .topnav2 li.closer {
+    display: inline-block;
+    float: right;
+  }
+}

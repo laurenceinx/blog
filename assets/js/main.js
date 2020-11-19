@@ -6,6 +6,7 @@
 
 (function($) {
 
+
 	var	$window = $(window),
 		$body = $('body');
 
@@ -31,7 +32,27 @@
 		if (browser.mobile)
 			$body.addClass('is-mobile');
 
-	// 隐藏与展示
-		var $closer = 
+	// 隐藏与展示响应式导航
+		$(".topnav .icon").click(function(){
+
+			$flag = $('.topnav').hasClass('responsive');
+			if ($flag){
+				$('.topnav').removeClass('responsive')
+			}
+			else{
+				$('.topnav').addClass('responsive')
+			};
+		});
+	// 隐藏与展示响应式导航2
+		$('.topnav2 .closer').click(function(){
+			alert('1');
+			$flag = $('.topnav2').hasClass('responsive');
+			if ($flag){
+				$('.topnav2').removeClass('responsive')
+			}else{
+				$('.topnav2').removeClass('responsive')
+			};
+		});
+
 
 })(jQuery);
